@@ -7,6 +7,8 @@
    z-index: 1000;
    text-align: left;
 
+   border-top: 2px solid black;
+
    overflow-y: hidden;
 	max-height: 0px;
 
@@ -15,12 +17,18 @@
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
-.open {
-   max-height: 60px;
+.ft-all-roads-animate {
+   transition-property: all;
+	transition-duration: .7s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
-.closed {
-   max-height: 0px;
+.ft-all-roads-hide {
+   display: none !important;
+}
+
+.ft-all-roads-open {
+   max-height: 100px;
 }
 
 .ft-all-roads-container img {

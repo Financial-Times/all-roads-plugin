@@ -15,7 +15,10 @@ const Sender = {
          }),
          dataType: 'json',
          success: ok,
-         contentType: 'application/json'
+         contentType: 'application/json',
+         error: (err) => {
+            console.error(err);
+         }
       });
    }
 };

@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const NoOpScraper = {
    scrape: () => {
-      var bodyContent = $('body').html();
+      var bodyContent = $('body').text();
       return bodyContent;
    }
 };
