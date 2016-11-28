@@ -13,12 +13,20 @@
    "content_scripts": [
       {
          "matches": ["<all_urls>"],
+         "exclude_matches": ["*://*.ft.com/*"],
          "css": ["css/main.css"],
          "js": ["js/main.js"],
          "run_at": "document_idle"
       }
    ],
+   "web_accessible_resources": [
+      "*.png",
+      "ui.html"
+   ],
    "permissions": [
-      "activeTab"
+      "activeTab",
+      "cookies",
+      "http://*/*",
+      "https://*/*"
    ]
 }

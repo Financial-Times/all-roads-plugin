@@ -1,0 +1,39 @@
+.ft-all-roads-container {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff1e0;
+   z-index: 1000;
+   text-align: left;
+
+   overflow-y: hidden;
+	max-height: 0px;
+
+   transition-property: all;
+	transition-duration: .7s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.open {
+   max-height: 60px;
+}
+
+.closed {
+   max-height: 0px;
+}
+
+.ft-all-roads-container img {
+   width: 60px;
+}
+
+.ft-all-roads-container .o-teaser {
+   padding-top: 6px;
+   margin-bottom: 0;
+}
+
+@media (max-width: 768px;) {
+   .ft-all-roads-container img {
+      width: 100%;
+   }
+}
