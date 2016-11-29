@@ -1,47 +1,40 @@
 <link rel="stylesheet" href="https://build.origami.ft.com/v2/bundles/css?modules=o-grid@4.3.0,o-fonts@2.2.0,o-colors@3.5.4,o-typography@4.3.2,o-teaser@1.0.0-beta.7,o-date@2.7.0"/>
 <script src="https://build.origami.ft.com/v2/bundles/js?modules=o-grid@4.3.0,o-fonts@2.2.0,o-colors@3.5.4,o-typography@4.3.2,o-teaser@1.0.0-beta.7,o-date@2.7.0"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/premasagar/cleanslate/master/cleanslate.css">
 
-<div class="ft-all-roads-container">
-	<!--div class="ft-all-roads-title">
-	<div class="o-grid-container">
-	<div class="o-grid-row">
-	<div data-o-grid-colspan="10">
-	<p>Suggested</p>
-</div>
-</div>
-</div>
-</div -->
-<div class="o-grid-container">
-	<div class="o-grid-row">
-		{{#each items}}
-		<div class="ft-all-roads-animate ft-all-roads-hide">
-			<div data-o-grid-colspan="S3 M2 L1">
-				<span><img src="//image.webservices.ft.com/v1/images/raw/ftlogo:brand-ft-logo-square?source=hackday-all-roads-plugin"></img></span>
-			</div>
-			<div data-o-grid-colspan="S9 M10 L11" class="ft-all-roads-content">
-				<div class="o-teaser o-teaser--small" data-o-component="o-teaser">
-					<div class="o-teaser__content">
-						{{#if concept}}
-						<a class="o-teaser__tag">{{concept}}</a>
-						{{/if}}
+<div class="cleanslate">
+	{{#each items}}
+	<div id="{{id}}" class="ft-all-roads-container">
+		<div class="o-grid-container">
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="S3 M2 L1">
+					<span><a href="https://www.ft.com/"><img alt="FT" src="//image.webservices.ft.com/v1/images/raw/ftlogo:brand-ft-logo-square?source=hackday-all-roads-plugin"></img></a></span>
+				</div>
+				<div data-o-grid-colspan="S9 M10 L11" class="ft-all-roads-content">
+					<div class="o-teaser o-teaser--small" data-o-component="o-teaser">
+						<div class="o-teaser__content">
+							{{#if annotation}}
+							<p class="ft-no-hover o-teaser__tag">{{annotation.prefLabel}}</p>
+							{{/if}}
 
-						{{#if title}}
-						<h2 class="o-teaser__heading"><a href="{{webUrl}}">{{title}}</a></h2>
-						{{/if}}
+							{{#if title}}
+							<h2 class="o-teaser__heading"><a href="{{webUrl}}">{{title}}</a></h2>
+							{{/if}}
 
-						{{#if standfirst}}
-						<p class="o-teaser__standfirst">{{standfirst}}</p>
-						{{/if}}
+							{{#if standfirst}}
+							<p class="o-teaser__standfirst">{{standfirst}}</p>
+							{{/if}}
 
-						{{#if publishedDate}}
-						<div class="o-teaser__timestamp {{inprogress}}">
-							<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}}</time>
+							{{#if publishedDate}}
+							<div class="o-teaser__timestamp {{inprogress}}">
+								<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}}</time>
+							</div>
+							{{/if}}
 						</div>
-						{{/if}}
 					</div>
 				</div>
 			</div>
 		</div>
-		{{/each}}
 	</div>
+	{{/each}}
 </div>

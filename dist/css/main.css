@@ -4,31 +4,20 @@
    left: 0;
    width: 100%;
    background-color: #fff1e0;
-   z-index: 1000;
+   z-index: 2147483647;
    text-align: left;
-
-   border-top: 2px solid black;
 
    overflow-y: hidden;
 	max-height: 0px;
 
-   transition-property: all;
+   transition-property: max-height;
 	transition-duration: .7s;
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.ft-all-roads-animate {
-   transition-property: all;
-	transition-duration: .7s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.ft-all-roads-hide {
-   display: none !important;
 }
 
 .ft-all-roads-open {
-   max-height: 100px;
+   max-height: 140px;
+   border-top: 2px solid black;
 }
 
 .ft-all-roads-container img {
@@ -38,6 +27,10 @@
 .ft-all-roads-container .o-teaser {
    padding-top: 6px;
    margin-bottom: 0;
+}
+
+.ft-no-hover:hover {
+   color: #9e2f50 !important;
 }
 
 @media (max-width: 768px;) {

@@ -7,14 +7,16 @@ import (
 )
 
 const response = `[
-  {
-    "title": "The Trump factor: can infrastructure rebuild your investments?",
-    "webUrl": "http://www.ft.com/cms/s/630652cc-a819-11e6-8898-79a99e2a4de6.html"
-  },
-  {
-    "title": "Trump win means I'm investing in Russia, gold and avoiding US equities",
-    "webUrl": "http://www.ft.com/cms/s/818c1d76-a684-11e6-8b69-02899e8bd9d1.html"
-  }
+	{
+		"byline": "Lauren Fedor in London",
+		"publishedDate": "2016-11-29T10:22:57.000Z",
+		"standfirst": "UK watchdog follows up curb on payday lenders with probe into other loan products",
+		"title": "FCA considers tighter curbs on high-cost consumer credit",
+		"webUrl": "http://www.ft.com/cms/s/a72cb3aa-b60c-11e6-961e-a1acd97f622d.html",
+		"annotation": {
+			"prefLabel": "London"
+		}
+	}
 ]`
 
 func main() {
