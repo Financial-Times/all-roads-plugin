@@ -31,7 +31,7 @@ const animate = (suggestions) => {
       window.setTimeout(() => {
          $('#' + suggestions[count % suggestions.length].id).toggleClass('ft-all-roads-open')
       }, 1000);
-   }, 12000);
+   }, 8000);
 }
 
 const doSend = (scraped) => {
@@ -41,10 +41,17 @@ const doSend = (scraped) => {
    }
 
    var url = window.location.href;
+   if (url === 'http://www.forbes.com/'){
+      console.log('Skipping forbes homepage :/');
+      return;
+   }
+
    console.log(url);
 
    Sender.send(url, scraped, (suggestions) => {
-      suggestions = _.uniq(suggestions);
+      suggestions = _.uniqBy(suggestions, (i) => {
+         return i.title;
+      });
       console.log(suggestions);
 
       if (!suggestions || suggestions.length === 0) {
